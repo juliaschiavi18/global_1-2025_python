@@ -1,4 +1,4 @@
-print("Bem vindo ao GeoChuva!")
+print("\nBem-vindo ao GeoChuva!")
 print("--------------------------------")
 #função para forçar o usuario a digitar uma das opcoes da lista de zona
 def forca_zona(msg, lista_zona):
@@ -44,23 +44,29 @@ risco_bairros = {
     'tatuape': 'MODERADO',
     'mooca': 'ALTO'
 }
+#enquanto o que estiver dentro, for verdadeiro
+while True:
+    
+    opcao_zona = forca_zona("Escolha qual Zona de sua preferência:", lista_zona)
+    print(f"\nVocê escolheu: {opcao_zona}")
 
 
+    print("--------------------------------")
+    lista_bairros = bairros_zona[opcao_zona]
+    opcao_bairro = forca_bairro(f"Escolha um bairro da {opcao_zona}:", lista_bairros)
 
-# pedindo para o usuario escolher uma zona
-print("--------------------------------")
-opcao_zona = forca_zona("Escolha qual Zona de sua preferência:", lista_zona)
-print(f"\nVocê escolheu: {opcao_zona}")
-
-# pedindo pro usuario escolher um bairro de acordo com a zona que ele escolheu
-print("--------------------------------")
-lista_bairros = bairros_zona[opcao_zona]
-opcao_bairro = forca_bairro(f"Escolha um bairro da {opcao_zona}:", lista_bairros)
-print(f"\nVocê mora na {opcao_zona}, no bairro {opcao_bairro}.") 
-print("--------------------------------")
-risco = risco_bairros.get(opcao_bairro, "desconhecido")
-print(f"\nVocê mora na {opcao_zona}, no bairro {opcao_bairro}.")
-print(f"Nível de risco de alagamento para {opcao_bairro}:  {risco}.")
+   
+    print(f"\nVocê mora na {opcao_zona}, no bairro {opcao_bairro}.")
+    risco = risco_bairros.get(opcao_bairro, "desconhecido")
+    print(f"Nível de risco de alagamento para {opcao_bairro}: {risco}.")
+    print("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+    
+#adicionando parte para encerrar o programa ou voltar para o inicio
+   
+    repetir = input("\nDeseja fazer outra consulta? (s/n): ")
+    if repetir != 's':
+        print("GeoChuva agradece. Até logo!")
+        break
 
 
 
