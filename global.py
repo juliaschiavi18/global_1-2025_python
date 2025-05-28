@@ -63,6 +63,8 @@ while True:
 
    
     print(f"\nVocê mora na {opcao_zona}, no bairro {opcao_bairro}.")
+#utilizando o .get pois se o bairro estiver no dicionário, ele retorna o risco real;
+#Se não estiver, ele não dá erro — só retorna a palavra "desconhecido".
     risco = risco_bairros.get(opcao_bairro, "desconhecido")
     print(f"Nível de risco de alagamento para {opcao_bairro}: {risco}.")
     print("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
