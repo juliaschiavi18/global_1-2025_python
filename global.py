@@ -15,6 +15,7 @@ def forca_bairro(msg, lista_bairro):
         escolha = input(f'Opção inválida. {msg}\n {bairros}\n--> ')
     return escolha
 lista_zona = ['zona central', 'zona norte', 'zona sul', 'zona oeste', 'zona leste']
+
 #lista dos bairros
 bairros_zona = {
     'zona central': ['Centro', 'República', 'Sé'],
@@ -24,13 +25,40 @@ bairros_zona = {
     'zona leste': ['Itaquera', 'Tatuapé', 'Mooca']
 }
 
-# pedindo para o usuario escolher uma zona
 
+#lista dos riscos de cada bairro
+risco_bairros = {
+    'Centro': 'ALTO',
+    'República': 'MUITO ALTO',
+    'Sé': 'MODERADO',
+    'Tucuruvi': 'MODERADO',
+    'Santana': 'ALTO',
+    'Casa Verde': 'MUITO ALTO',
+    'Santo Amaro': 'MUITO ALTO',
+    'Capão Redondo': 'ALTO',
+    'Jabaquara': 'MODERADO',
+    'Pinheiros': 'MODERADO',
+    'Butantã': 'ALTO',
+    'Lapa': 'ALTO',
+    'Itaquera': 'MUITO ALTO',
+    'Tatuapé': 'MODERADO',
+    'Mooca': 'ALTO'
+}
+
+
+
+# pedindo para o usuario escolher uma zona
+print("--------------------------------")
 opcao_zona = forca_zona("Escolha qual Zona de sua preferência:", lista_zona)
 print(f"\nVocê escolheu: {opcao_zona}")
 
 # pedindo pro usuario escolher um bairro de acordo com a zona que ele escolheu
-
+print("--------------------------------")
 lista_bairros = bairros_zona[opcao_zona]
 opcao_bairro = forca_bairro(f"Escolha um bairro da {opcao_zona}:", lista_bairros)
+print(f"\nVocê mora na {opcao_zona}, no bairro {opcao_bairro}.") 
+print("--------------------------------")
+risco = risco_bairros.get(opcao_bairro, "desconhecido")
 print(f"\nVocê mora na {opcao_zona}, no bairro {opcao_bairro}.")
+print(f"Nível de risco de alagamento para {opcao_bairro}:  {risco}.")
+
