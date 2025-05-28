@@ -18,31 +18,31 @@ lista_zona = ['zona central', 'zona norte', 'zona sul', 'zona oeste', 'zona lest
 
 #lista dos bairros
 bairros_zona = {
-    'zona central': ['Centro', 'República', 'Sé'],
-    'zona norte': ['Tucuruvi', 'Santana', 'Casa Verde'],
-    'zona sul': ['Santo Amaro', 'Capão Redondo', 'Jabaquara'],
-    'zona oeste': ['Pinheiros', 'Butantã', 'Lapa'],
-    'zona leste': ['Itaquera', 'Tatuapé', 'Mooca']
+    'zona central': ['centro', 'república', 'sé'],
+    'zona norte': ['tucuruvi', 'santana', 'casa Verde'],
+    'zona sul': ['santo Amaro', 'capao Redondo', 'jabaquara'],
+    'zona oeste': ['pinheiros', 'butanta', 'lapa'],
+    'zona leste': ['itaquera', 'tatuape', 'mooca']
 }
 
 
 #lista dos riscos de cada bairro
 risco_bairros = {
-    'Centro': 'ALTO',
-    'República': 'MUITO ALTO',
-    'Sé': 'MODERADO',
-    'Tucuruvi': 'MODERADO',
-    'Santana': 'ALTO',
-    'Casa Verde': 'MUITO ALTO',
-    'Santo Amaro': 'MUITO ALTO',
-    'Capão Redondo': 'ALTO',
-    'Jabaquara': 'MODERADO',
-    'Pinheiros': 'MODERADO',
-    'Butantã': 'ALTO',
-    'Lapa': 'ALTO',
-    'Itaquera': 'MUITO ALTO',
-    'Tatuapé': 'MODERADO',
-    'Mooca': 'ALTO'
+    'centro': 'ALTO',
+    'republica': 'MUITO ALTO',
+    'sé': 'MODERADO',
+    'tucuruvi': 'MODERADO',
+    'santana': 'ALTO',
+    'casa Verde': 'MUITO ALTO',
+    'santo Amaro': 'MUITO ALTO',
+    'capao Redondo': 'ALTO',
+    'jabaquara': 'MODERADO',
+    'pinheiros': 'MODERADO',
+    'butanta': 'ALTO',
+    'lapa': 'ALTO',
+    'itaquera': 'MUITO ALTO',
+    'tatuape': 'MODERADO',
+    'mooca': 'ALTO'
 }
 
 
@@ -61,4 +61,6 @@ print("--------------------------------")
 risco = risco_bairros.get(opcao_bairro, "desconhecido")
 print(f"\nVocê mora na {opcao_zona}, no bairro {opcao_bairro}.")
 print(f"Nível de risco de alagamento para {opcao_bairro}:  {risco}.")
+
+
 
