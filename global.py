@@ -20,7 +20,7 @@ lista_zona = ['zona central', 'zona norte', 'zona sul', 'zona oeste', 'zona lest
 bairros_zona = {
     'zona central': ['centro', 'república', 'sé'],
     'zona norte': ['tucuruvi', 'santana', 'casa Verde'],
-    'zona sul': ['santo Amaro', 'capao Redondo', 'jabaquara'],
+    'zona sul': ['santo amaro', 'capao redondo', 'jabaquara'],
     'zona oeste': ['pinheiros', 'butanta', 'lapa'],
     'zona leste': ['itaquera', 'tatuape', 'mooca']
 }
@@ -34,8 +34,8 @@ risco_bairros = {
     'tucuruvi': 'MODERADO',
     'santana': 'ALTO',
     'casa Verde': 'MUITO ALTO',
-    'santo Amaro': 'MUITO ALTO',
-    'capao Redondo': 'ALTO',
+    'santo amaro': 'MUITO ALTO',
+    'capao redondo': 'ALTO',
     'jabaquara': 'MODERADO',
     'pinheiros': 'MODERADO',
     'butanta': 'ALTO',
