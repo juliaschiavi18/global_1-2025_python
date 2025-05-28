@@ -1,3 +1,8 @@
+#Julia Souza Costa Schiavi RM: 562418
+#Thayna Ferreira Lopes RM: 566349
+#Leonardo Grosskopf Martins RM: 562255
+
+
 print("\nBem-vindo ao GeoChuva!")
 print("--------------------------------")
 #função para forçar o usuario a digitar uma das opcoes da lista de zona
@@ -16,7 +21,7 @@ def forca_bairro(msg, lista_bairro):
     return escolha
 lista_zona = ['zona central', 'zona norte', 'zona sul', 'zona oeste', 'zona leste']
 
-#lista dos bairros
+#utilizando um Dicionario aninhado com listas para facilitar o codigo, em vez de fazer varias variaveis com as respectivas listas
 bairros_zona = {
     'zona central': ['centro', 'república', 'sé'],
     'zona norte': ['tucuruvi', 'santana', 'casa Verde'],
@@ -26,7 +31,7 @@ bairros_zona = {
 }
 
 
-#lista dos riscos de cada bairro
+#lista dos riscos de cada bairro, utilizando o Dicionario aninhado
 risco_bairros = {
     'centro': 'ALTO',
     'republica': 'MUITO ALTO',
@@ -44,7 +49,8 @@ risco_bairros = {
     'tatuape': 'MODERADO',
     'mooca': 'ALTO'
 }
-#enquanto o que estiver dentro, for verdadeiro
+#repetir o código indefinidamente,  permitindo o usuário 
+# fazer várias consultas sem precisar reiniciar o programa.
 while True:
     
     opcao_zona = forca_zona("Escolha qual Zona de sua preferência:", lista_zona)
